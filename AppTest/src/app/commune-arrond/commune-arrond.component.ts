@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-commune-arrond',
   templateUrl: './commune-arrond.component.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommuneArrondComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+    
+
   }
 
 }

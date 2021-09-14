@@ -1,0 +1,16 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-xs-12">
+            <h2><strong> Arrondissements de la Région de {{localite[index].name}}</strong></h2>
+           
+            <li class="list-group-item" *ngFor="let  element of arrondi[index].value">
+               <h4> <strong>{{element}}        
+                </strong></h4>
+                <p style="text-decoration: underline;">Superficie:</p>
+                <p style="text-decoration: underline;">Habitant:</p>
+            </li>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+

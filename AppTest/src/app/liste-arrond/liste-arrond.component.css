@@ -1,7 +1,6 @@
-
 h2{
-    background-color: wheat;
-    color: black;
+    background-color:tomato;
+    color:black;
     margin-top: 50px;
 }
 .banniere{
@@ -10,4 +9,3 @@ h2{
 	margin-top: 50px;
 	 box-shadow: 5px 5px 15px lightblue;
 }
-

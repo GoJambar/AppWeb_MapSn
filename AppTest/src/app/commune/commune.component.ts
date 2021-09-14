@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MonServiceService } from '../mon-service.service';
 
 @Component({
   selector: 'app-commune',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommuneComponent implements OnInit {
 
-  constructor() { }
+localite: any[] = [];
+index:number=0;
+
+
+  constructor(public service: MonServiceService) { }
 
   ngOnInit(): void {
+    this.localite=this.service.localite;
+    this.index=this.service.index;
+
+    
   }
 
 }

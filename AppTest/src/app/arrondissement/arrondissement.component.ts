@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MonServiceService } from '../mon-service.service';
 
 @Component({
   selector: 'app-arrondissement',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArrondissementComponent implements OnInit {
 
-  constructor() { }
+  index :number=0;
+  constructor(public sevice:MonServiceService) { }
 
   ngOnInit(): void {
+    this.index=this.sevice.index;
+   
+  }
+  envoyerId(){
+  this.index=this.sevice.index;
   }
 
 }
