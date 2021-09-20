@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MonServiceService } from './mon-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MapSN';
+    
+    constructor() { }
+  
+    ngOnInit(): void {
+      
+    }
+    
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MonServiceService } from '../mon-service.service';
+
 
 @Component({
   selector: 'app-map-sn',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapSNComponent implements OnInit {
 
-  constructor() { }
+  localite: any[] = [];
+
+  
+  constructor(public service: MonServiceService ) { }
 
   ngOnInit(): void {
+    this.localite=this.service.localite;
+  
+  }
+
+
+  onEnvoyer(index: number):void{
+    console.log("hello");
+    this.service.index=index;
+
   }
 
 }
