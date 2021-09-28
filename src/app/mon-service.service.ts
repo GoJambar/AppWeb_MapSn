@@ -10,7 +10,9 @@ export class MonServiceService {
   constructor() { }
 
   index:  number=0;
-  name="";
+  indice: number=0;
+  
+  
 
   localite=[
     {

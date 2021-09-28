@@ -21,9 +21,7 @@ export class MapSNComponent implements OnInit {
 
 
   onEnvoyer(index: number):void{
-    console.log("hello");
     this.service.index=index;
-
   }
 
 }

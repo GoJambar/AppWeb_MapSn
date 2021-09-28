@@ -14,13 +14,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MonServiceService } from './mon-service.service';
 import { ListeArrondComponent } from './liste-arrond/liste-arrond.component';
+import { DetailArrondComponent } from './detail-arrond/detail-arrond.component';
 
 
 const appRoutes: Routes=[
   
   { path:'region' , component: CommuneComponent},
   { path:'', component: MapSNComponent},
-  { path: 'listeArrond', component: ListeArrondComponent}  
+  { path: 'listeArrond', component: ListeArrondComponent}  ,
+  {path: "arrondissement", component: DetailArrondComponent}
 
 ];
 @NgModule({
@@ -33,7 +35,8 @@ const appRoutes: Routes=[
     CommuneArrondComponent,
     CommuneRuralesComponent,
     MapSNComponent,
-    ListeArrondComponent
+    ListeArrondComponent,
+    DetailArrondComponent
   ],
   imports: [
     BrowserModule,

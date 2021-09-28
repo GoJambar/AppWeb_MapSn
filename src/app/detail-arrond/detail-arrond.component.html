@@ -1,0 +1,18 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-xs-12">
+            <h2><strong> Arrondissement  de {{arrondi[index].value[indice]}}</strong></h2>
+            <section class="banniere"></section>
+            <ul class="list-group">
+                <app-accueil></app-accueil>
+            <a routerLink="/arrondissement"> <button class="bouton">Voir la liste</button></a>
+                <app-commune-arrond></app-commune-arrond>
+                <app-commune-rurales></app-commune-rurales>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<router-outlet></router-outlet>
+
+
