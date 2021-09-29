@@ -1,0 +1,16 @@
+.banniere{
+	width: 99%;
+	height: 200px;
+	margin-top: 50px;
+	 box-shadow: 5px 5px 15px lightblue;
+}
+h2{
+    background-color:tomato;
+    color:black;
+    margin-top: 50px;
+}
+.bouton{
+    width: 100px;
+    margin-left: 20px;
+
+}
