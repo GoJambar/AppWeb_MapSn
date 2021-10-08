@@ -1,0 +1,43 @@
+h2{
+    background-color:tomato;
+    color:black;
+    margin-top: 50px;
+}
+.banniere{
+	width: 99%;
+	height: 200px;
+	margin-top: 50px;
+	 box-shadow: 5px 5px 15px lightblue;
+}
+
+
+.action {
+    /*background: rgb(242, 247, 255);*/
+    background-color: rgba(185, 208, 240, 0.16);
+    border: 1px solid #CED8E7;
+    margin: 30px 0px;
+    padding-bottom: 30px;
+    transition: all 0.3s ease-in;
+}
+.action:hover 
+{
+    box-shadow: 0px 2px 3px 2px #CED8E7;
+}
+
+.action:hover .img-action 
+{
+    opacity: 1;
+}
+
+
+.action-description p
+{
+    padding: 0px 10px;
+    line-height: 25px;
+}
+.titre-action 
+{
+    padding: 20px 0px;
+    color: darkcyan;
+    font-size: 29px;
+}

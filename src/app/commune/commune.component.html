@@ -1,0 +1,18 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-xs-12">
+            <h2><strong> Région  de {{localite[index].name}}</strong></h2>
+            <section class="banniere"></section>
+            <ul class="list-group">
+                <app-departement></app-departement>
+                <app-arrondissement></app-arrondissement>
+                <app-accueil></app-accueil>
+                <app-commune-arrond></app-commune-arrond>
+                <app-commune-rurales></app-commune-rurales>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<router-outlet></router-outlet>
+

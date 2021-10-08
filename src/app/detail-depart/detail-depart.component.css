@@ -1,0 +1,25 @@
+.banniere{
+	width: 99%;
+	height: 200px;
+	margin-top: 50px;
+	 box-shadow: 5px 5px 15px lightblue;
+}
+h2{
+    background-color:yellow;
+    color:black;
+    margin-top: 50px;
+}
+.region{
+    
+    background-color: wheat;
+    color: black;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 88%;
+
+}
+.bouton{
+    width: 100px;
+    margin-left: 20px;
+
+}

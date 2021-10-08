@@ -1,0 +1,25 @@
+<h2 class ="region"><strong>Region de {{region[indexRegion].name}}</strong></h2>
+<div class="container"> 
+    
+    <div class="row">
+        
+        <div class="col-xs-12">
+            <h2><strong> Departement  de  {{localiteDep.name}}</strong></h2>
+            <section class="banniere"></section>
+            <ul class="list-group">
+                <app-arrondissement></app-arrondissement>
+                <a routerLink='/listeArrond'>
+                    <button class="bouton" >Voir la liste</button>
+                </a>
+                <app-accueil></app-accueil>
+           
+                <app-commune-arrond></app-commune-arrond>
+                <app-commune-rurales></app-commune-rurales>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<router-outlet></router-outlet>
+
+
