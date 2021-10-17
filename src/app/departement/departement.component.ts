@@ -11,25 +11,14 @@ import { DepartementService } from '../services/departement.service';
 })
 export class DepartementComponent implements OnInit {
 
- localite : Departement[]=[];
  
-  constructor(private service: DepartementService,private monService:MonServiceService) {
-    
-   
-      //{
-    //  console.log(data);
-     // this.localite=data;
-    //})
+  constructor() {
   }
-  codeDep:number=0;
   
 
   ngOnInit(): void { 
-    this.codeDep=this.monService.index;
 
-  }
-  listeDep(){
-    this.service.getDepartement().subscribe(data => this.localite=data._embedded.departements);
+
   }
 
 

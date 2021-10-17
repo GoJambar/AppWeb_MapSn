@@ -1,16 +1,9 @@
 h2{
-    background-color:tomato;
+    background-color:#D1ABAD;
     color:black;
     margin-top: 50px;
+    font-family: serif;
 }
-.banniere{
-	width: 99%;
-	height: 200px;
-	margin-top: 50px;
-	 box-shadow: 5px 5px 15px lightblue;
-}
-
-
 .action {
     /*background: rgb(242, 247, 255);*/
     background-color: rgba(185, 208, 240, 0.16);

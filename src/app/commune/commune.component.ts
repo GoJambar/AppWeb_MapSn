@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MonServiceService } from '../mon-service.service';
+import { Region } from '../modeles/region';
+import { DepartementService } from '../services/departement.service';
+import { RegionServicesService } from '../services/region-services.service';
 
 @Component({
   selector: 'app-commune',
@@ -7,15 +9,15 @@ import { MonServiceService } from '../mon-service.service';
   styleUrls: ['./commune.component.css']
 })
 export class CommuneComponent implements OnInit {
+region: Region=new Region;
+link="";
 
-localite: any[] = [];
-index:number=0;
-
-  constructor(public service: MonServiceService) { }
+  constructor(private serviceRegion: RegionServicesService,
+    private serviceDep:DepartementService) { }
 
   ngOnInit(): void {
-    this.localite=this.service.localite;
-    this.index=this.service.index;   
+      this.serviceRegion.getRegionById().subscribe(data=>this.region=data);  
+    
   }
  
 }

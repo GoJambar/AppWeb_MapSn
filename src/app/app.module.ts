@@ -19,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListeDepartComponent } from './liste-depart/liste-depart.component';
 import { ListeComRuralesComponent } from './liste-com-rurales/liste-com-rurales.component';
 import { DetailDepartComponent } from './detail-depart/detail-depart.component';
-
+import { ListeCommunesComponent } from './liste-communes/liste-communes.component';
+import { DetailCommuneComponent } from './detail-commune/detail-commune.component';
 
 const appRoutes: Routes=[
   
@@ -29,7 +30,9 @@ const appRoutes: Routes=[
   {path: "arrondissement", component: DetailArrondComponent},
   {path: "listeDepartement", component: ListeDepartComponent},
   {path: "listeComRurales", component: ListeComRuralesComponent},
-  {path:"departement",component: DetailDepartComponent}
+  {path:"departement",component: DetailDepartComponent},
+  { path:"listeCommunes", component:ListeCommunesComponent},
+  { path: "commune", component:DetailCommuneComponent}
 
 ];
 @NgModule({
@@ -46,7 +49,9 @@ const appRoutes: Routes=[
     DetailArrondComponent,
     ListeDepartComponent,
     ListeComRuralesComponent,
-    DetailDepartComponent
+    DetailDepartComponent,
+    ListeCommunesComponent,
+    DetailCommuneComponent
   ],
   imports: [
     BrowserModule,

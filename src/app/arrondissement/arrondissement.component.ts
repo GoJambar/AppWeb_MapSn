@@ -8,15 +8,11 @@ import { MonServiceService } from '../mon-service.service';
 })
 export class ArrondissementComponent implements OnInit {
 
-  index :number=0;
-  constructor(public sevice:MonServiceService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.index=this.sevice.index;
+    
    
-  }
-  envoyerId(){
-  this.index=this.sevice.index;
   }
 
 }

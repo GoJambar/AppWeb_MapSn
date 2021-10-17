@@ -1,6 +1,8 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
-import { MonServiceService } from '../mon-service.service';
+import { Region } from '../modeles/region';
 import { DepartementService } from '../services/departement.service';
+import { RegionServicesService } from '../services/region-services.service';
 
 
 @Component({
@@ -10,20 +12,40 @@ import { DepartementService } from '../services/departement.service';
 })
 export class MapSNComponent implements OnInit {
 
-  localite: any[] = [];
+  localite:Region[]=[];
+  region: Region=new Region;
+  name: string="";
+
 
   
-  constructor(public service: MonServiceService, private serviceDep: DepartementService ) { }
+  constructor( private serviceDep: DepartementService,private serviceRegion: RegionServicesService ) { }
 
   ngOnInit(): void {
-    this.localite=this.service.localite;
+    this.serviceRegion.getRegion().subscribe(data=>this.localite=data._embedded.regions);
   
   }
 
+  EnvoyerIdReg(link: string,name:string){
+    this.serviceRegion.lien=link;
+    this.serviceDep.lien=link;
+    this.serviceDep.nameRegion=name;
 
-  onEnvoyer(index: number):void{
-    this.service.index=index;
-    this.serviceDep.indexDepartement=index + 1;
+
+  }
+
+  search(){
+    if(this.name != ""){
+      this.localite=this.localite.filter(data=>{
+        return data.name.toLocaleUpperCase().match(this.name.toLocaleUpperCase());
+      });
+
+    }
+    else if (this.name== ""){
+      this.ngOnInit();
+    }
+   
+     
+
   }
 
 }

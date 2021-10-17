@@ -1,25 +1,46 @@
-.banniere{
-	width: 99%;
-	height: 200px;
-	margin-top: 50px;
-	 box-shadow: 5px 5px 15px lightblue;
-}
+
 h2{
-    background-color:yellow;
+background-color: #8783D1;
     color:black;
     margin-top: 50px;
+    font-family: sans-serif;
+    
 }
 .region{
     
-    background-color: wheat;
+    background-color: whitesmoke;
     color: black;
     margin-top: 50px;
     margin-left: 50px;
     width: 88%;
+    font-family: serif;
 
 }
-.bouton{
-    width: 100px;
-    margin-left: 20px;
-
+.action {
+    /*background: rgb(242, 247, 255);*/
+    background-color: rgba(185, 208, 240, 0.16);
+    border: 1px solid #CED8E7;
+    margin: 30px 0px;
+    padding-bottom: 30px;
+    transition: all 0.3s ease-in;
+    height: 100px;
 }
+.action:hover 
+{
+    box-shadow: 0px 2px 3px 2px #CED8E7;
+}
+
+.action:hover
+{
+    opacity: 1;
+}
+
+
+.action-description
+{
+    padding: 0px 10px;
+    line-height: 25px;
+}
+h4{
+    font-family:monospace;
+ }

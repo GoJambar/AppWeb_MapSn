@@ -19,7 +19,7 @@ export class ArrondServiceService {
     return this.http.get<LocaliteDep>('/v1/'+ this.liste + '/arron');
   }
 
-  getIdArrondissement():Observable<Arrondissement>{
+  getArrondissementById():Observable<Arrondissement>{
     
     return this.http.get<Arrondissement>('/v1/'+ this.detail);
   }

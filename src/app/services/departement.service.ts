@@ -1,32 +1,35 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { LocaliteDep } from '../modeles/localite-dep';
-import { Localite } from '../modeles/localite';
-import { MonServiceService } from '../mon-service.service';
 import { Departement } from '../modeles/departement';
+
+import { RegionServicesService } from './region-services.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DepartementService {
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient,private serviceRegion : RegionServicesService) { 
 
   } 
-  indexDepartement: number=1;
   lien="";
-   api="http://localhost:8080/regions/";
+  nameRegion="";
+  api="http://localhost:8080/departements/";
   
   getDepartement():Observable<LocaliteDep>{
-    
-    return this.http.get<LocaliteDep>('/v1/'+ this.api + this.indexDepartement+ '/depart');
+   
+      return this.http.get<LocaliteDep>('/v1/'+ this.lien + '/depart' );
+  
   }
 
-  getIdDepartement():Observable<Departement>{
+  getDepartementById():Observable<Departement>{
     
     return this.http.get<Departement>('/v1/'+ this.lien);
+
+  
   }
 }
 

@@ -1,7 +1,13 @@
+<nav class="navbar">
+    <input class="form-control" type="text" [(ngModel)]="name"
+    placeholder="Entrer le nom du departement" (input)="search()">
+
+</nav>
+
 <div class="container"> 
     <div class="row">
         <div class="col-xs-12">
-            <h2><strong> Departements de la Région de {{localiteRegion[index].name}} </strong></h2>
+            <h2><strong> Departements de la Région de {{region.name |uppercase}} </strong></h2>
 
             <div class="container">
                 <div class="row">
@@ -9,14 +15,9 @@
                                 <div class="action"> 
                                     <div class="action-description text-center">
                                        <ul class="list-group" >
-                                            <h4> <strong>{{element.name | uppercase}}        
+                                            <h4> <strong>{{element.name  | uppercase}}        
                                                 </strong></h4>
-                                                
-                                                <p> <strong>Habitant</strong>:  {{element.population}}</p>
-                                                <p> <strong>Superficie</strong>: {{element.superficie}}</p>
-                                                <p><strong>Latitude</strong>: {{element.latitude}}</p>
-                                                <p><strong>Longitude</strong>: {{element.longitute}}</p>
-                                                <a routerLink='/departement' ><button class="btn btn-success" (click)="EnvoyerIdDep(element._links.self.href)"
+                                            <a routerLink='/departement' ><button class="btn btn-success" (click)="EnvoyerIdDep(element._links.self.href)"
                                              >Plus</button></a>
                                         </ul>
                                     </div>

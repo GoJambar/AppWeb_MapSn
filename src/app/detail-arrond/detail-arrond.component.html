@@ -1,21 +1,69 @@
-<h2 class ="region"><strong>Region de {{localite[index].name}}</strong></h2>
+<h1 class ="region"><strong>Region de {{nameRegion | uppercase}} </strong></h1>
 <div class="container"> 
-    
-    <div class="row">
-        
+    <div class="row">        
         <div class="col-xs-12">
             <h2><strong> Arrondissement  de {{localArrond.name}}</strong></h2>
-            <section class="banniere"></section>
-            <ul class="list-group">
-                <app-accueil></app-accueil>
-            <a routerLink="/arrondissement"> <button class="bouton">Voir la liste</button></a>
-                <app-commune-arrond></app-commune-arrond>
-                <app-commune-rurales></app-commune-rurales>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+            <div class="col-lg-3 col-sm-6 col-xs-12 ">
+                <div class="action">
+                    <div class="action-description text-center">
+                        <ul class="list-group" >
+                            <h4><u>Superficie:</u> <br> {{localArrond.superficie}} m² </h4>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+
+            <div class="col-lg-3 col-sm-6 col-xs-12 ">
+                <div class="action">
+                    <div class="action-description text-center">
+                        <ul class="list-group" >
+                            <h4><u>Population:</u><br>{{localArrond.population}} Hbts</h4>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+   
+<div class="col-lg-3 col-sm-6 col-xs-12 ">
+    <div class="action">
+        <div class="action-description text-center">
+            <ul class="list-group" >
+                <h4><u> Latitude: </u> <br>{{localArrond.latitude}} degres</h4>
             </ul>
         </div>
     </div>
-    
+    <div class="clearfix"></div>
+
 </div>
+<div class="col-lg-3 col-sm-6 col-xs-12 ">
+    <div class="action">
+        <div class="action-description text-center">
+            <ul class="list-group" >
+                <h4> <u> Longitude: </u> <br>{{localArrond.longitute}} degres</h4>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+</div>
+
+
+
+            <ul class="list-group">
+                <app-accueil></app-accueil>
+            </ul>
+        </div>
+    </div>
+
+   
 <router-outlet></router-outlet>
 
 

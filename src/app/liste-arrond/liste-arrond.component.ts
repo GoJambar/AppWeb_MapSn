@@ -1,8 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Arrondissement } from '../modeles/arrondissement';
-import { Departement } from '../modeles/departement';
-import { MonServiceService } from '../mon-service.service';
+import { Region } from '../modeles/region';
 import { ArrondServiceService } from '../services/arrond-service.service';
+import { CommuneServiceService } from '../services/commune-service.service';
+import { DepartementService } from '../services/departement.service';
+import { RegionServicesService } from '../services/region-services.service';
 
 @Component({
   selector: 'app-liste-arrond',
@@ -12,32 +14,24 @@ import { ArrondServiceService } from '../services/arrond-service.service';
 
 export class ListeArrondComponent implements OnInit {
  
-localite:any[]=[];
 arrond:Arrondissement[]=[];
-index:number=0;
-arrondi:any[]=[];
-indice:number=0;
-item=""
+nomRegion="";
+region:Region=new Region;
 
-  constructor( public service:MonServiceService,private arrondService: ArrondServiceService) { }
+  constructor(private arrondService: ArrondServiceService,private serviceDep:DepartementService,
+    private serviceCom: CommuneServiceService,private serviceRegion:RegionServicesService) { }
 
   ngOnInit(): void {
-    this.localite=this.service.localite;
-    this.index=this.service.index;
-    this.arrondi=this.service.arrondi;
-    this.indice=this.service.indice;
-    this.arrondService.getArrondissement().subscribe(data => this.arrond=data._embedded.arrondissements);
-
-
+      this.arrondService.getArrondissement().subscribe(data => this.arrond=data._embedded.arrondissements);
+      this.serviceRegion.getRegionById().subscribe(data=>this.region=data);
+   
    
   }
 
-  envoyerIdArrond(id:number):void{
-    this.service.indice=id;
-  }
 
   EnvoyerIdAr(code: string){
     this.arrondService.detail=code;
+    this.serviceCom.lien=code;
   }
 
 }

@@ -1,9 +1,9 @@
-<h1 class ="region"><strong>Region de {{region.name | uppercase}}</strong></h1>
+<h1 class ="region"><strong>Region de {{nameRegion | uppercase}}</strong></h1>
 
 <div class="container">   
     <div class="row">       
         <div class="col-xs-12">
-            <h2><strong> Departement  de  {{localiteDep.name | uppercase}}</strong></h2>
+            <h2><strong> Commune  de  {{localite.name | uppercase}}</strong></h2>
         </div>
     </div>  
 </div>
@@ -14,7 +14,7 @@
                 <div class="action">
                     <div class="action-description text-center">
                         <ul class="list-group" >
-                            <h4><u> Superficie:</u><br> {{localiteDep.superficie}} m² </h4>
+                            <h4><u> Superficie:</u><br> {{localite.superficie}} m² </h4>
                         </ul>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 <div class="action">
                     <div class="action-description text-center">
                         <ul class="list-group" >
-                            <h4> <u>Population: </u><br>{{localiteDep.population}} Hbts </h4>
+                            <h4> <u>Population: </u><br>{{localite.population}} Hbts </h4>
                         </ul>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
     <div class="action">
         <div class="action-description text-center">
             <ul class="list-group" >
-                <h4> <u>Latitude:</u><br>{{localiteDep.latitude}} degres </h4>
+                <h4> <u>Latitude:</u><br>{{localite.latitude}} degres </h4>
             </ul>
         </div>
     </div>
@@ -49,23 +49,22 @@
     <div class="action">
         <div class="action-description text-center">
             <ul class="list-group" >
-                <h4><u>Longitude:</u><br>{{localiteDep.longitute}} degres </h4>
+                <h4><u>Longitude:</u><br>{{localite.longitute}} degres </h4>
             </ul>
         </div>
     </div>
     <div class="clearfix"></div>
 
 </div>
-
-           
-            <ul class="list-group">
-                <app-arrondissement></app-arrondissement>
-                
-            </ul>
+<a routerLink="">
+    <button class="bouton">Retour à l'accueil</button>
+     
+</a>
         
     </div>
     
 </div>
 <router-outlet></router-outlet>
+
 
 

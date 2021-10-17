@@ -1,18 +1,20 @@
 <div class="container"> 
     <div class="row">
         <div class="col-xs-12">
-            <h2><strong> Arrondissements de la Région de {{region.name | uppercase}} </strong></h2>
+            <h2><strong> Communes de la Région de {{nom |uppercase}} </strong></h2>
 
             <div class="container">
                 <div class="row">
-                        <div class="col-lg-4 col-sm-6 col-xs-12 " *ngFor="let  element of arrond">
+                        <div class="col-lg-4 col-sm-6 col-xs-12 " *ngFor="let  element of localite">
                                 <div class="action"> 
                                     <div class="action-description text-center">
                                        <ul class="list-group" >
-                                            <h4> <strong>{{element.name}}        
+                                            <h4> <strong>{{element.name  | uppercase}}        
                                                 </strong></h4>
-                                               
-                                                <a routerLink="/arrondissement"><button class="btn btn-success"(click)="EnvoyerIdAr(element._links.self.href)">Plus</button></a>
+                                                
+                            
+                                                <a routerLink="/commune"><button class="btn btn-success" (click)="EnvoyerIdCom(element._links.self.href)"
+                                             >Plus</button></a>
                                         </ul>
                                     </div>
                                 </div>
@@ -25,4 +27,6 @@
 </div>
 
 <router-outlet></router-outlet>
+
+
 

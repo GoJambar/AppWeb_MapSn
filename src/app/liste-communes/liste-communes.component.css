@@ -4,10 +4,11 @@ h2{
     margin-top: 50px;
     font-family: serif;
 }
-
-input{
-	width: 30%;
-	margin-left: auto;
+.banniere{
+	width: 99%;
+	height: 200px;
+	margin-top: 50px;
+	 box-shadow: 5px 5px 15px lightblue;
 }
 
 
@@ -35,6 +36,9 @@ input{
 {
     padding: 0px 10px;
     line-height: 25px;
+}
+h4{
+    font-family: sans-serif;
 }
 
 

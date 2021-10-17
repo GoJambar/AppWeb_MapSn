@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Departement } from '../modeles/departement';
-import { LocaliteDep } from '../modeles/localite-dep';
-import { MonServiceService } from '../mon-service.service';
+import { Region } from '../modeles/region';
 import { ArrondServiceService } from '../services/arrond-service.service';
 import { DepartementService } from '../services/departement.service';
+import { RegionServicesService } from '../services/region-services.service';
 
 @Component({
   selector: 'app-liste-depart',
@@ -12,22 +12,36 @@ import { DepartementService } from '../services/departement.service';
 })
 export class ListeDepartComponent implements OnInit {
 
-  constructor(private service : DepartementService,private monService:MonServiceService,private serviceArrond: ArrondServiceService) { }
-  localite: Departement[]=[];
-  localiteRegion:any[]=[];
-  index:number=0;
-  idDepart: number=0;
+  constructor(private service: DepartementService,
+    private serviceRegion:RegionServicesService,
+     private serviceArrond: ArrondServiceService) { }
+  localite: Departement[] = [];
+  name = "";
+  localiteDep:Departement=new Departement;
+  region:Region=new Region;
 
   ngOnInit(): void {
-    this.localiteRegion=this.monService.localite;
-    this.index=this.monService.index;
-    this.service.getDepartement().subscribe(data => this.localite=data._embedded.departements);
-        
+    this.service.getDepartement().subscribe(data => this.localite = data._embedded.departements);
+
+    this.serviceRegion.getRegionById().subscribe(data => this.region = data);
+    
   }
 
-  EnvoyerIdDep(code: string){
-    this.service.lien=code;
-    this.serviceArrond.liste=code;
+  EnvoyerIdDep(code: string):void {
+    this.service.lien = code;
+    this.serviceArrond.liste = code;
+
+  }
+  search(){
+    if(this.name !=""){
+      this.localite=this.localite.filter(data=>{
+        return data.name.toLocaleUpperCase().match(this.name.toLocaleUpperCase());
+      })
+
+    }
+    else if (this.name== ""){
+      this.ngOnInit();
+    }
 
   }
 
