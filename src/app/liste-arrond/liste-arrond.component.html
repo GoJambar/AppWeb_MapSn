@@ -1,7 +1,7 @@
 <div class="container"> 
     <div class="row">
         <div class="col-xs-12">
-            <h2><strong> Arrondissements de la Région de {{region.name | uppercase}} </strong></h2>
+            <h2><strong> Arrondissements du departement de {{departement.name | uppercase}} </strong></h2>
 
             <div class="container">
                 <div class="row">
@@ -12,7 +12,7 @@
                                             <h4> <strong>{{element.name}}        
                                                 </strong></h4>
                                                
-                                                <a routerLink="/arrondissement"><button class="btn btn-success"(click)="EnvoyerIdAr(element._links.self.href)">Plus</button></a>
+                                                <a routerLink="/arrondissement"><button (click)="EnvoyerIdAr(element._links.self.href)">Plus</button></a>
                                         </ul>
                                     </div>
                                 </div>

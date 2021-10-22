@@ -1,14 +1,9 @@
-<nav class="navbar">
-    <input class="form-control" type="text" [(ngModel)]="name"
-    placeholder="Entrer le nom du departement" (input)="search()">
-
-</nav>
 
 <div class="container"> 
     <div class="row">
         <div class="col-xs-12">
             <h2><strong> Departements de la Région de {{region.name |uppercase}} </strong></h2>
-
+            
             <div class="container">
                 <div class="row">
                         <div class="col-lg-4 col-sm-6 col-xs-12 " *ngFor="let  element of localite">
@@ -17,7 +12,7 @@
                                        <ul class="list-group" >
                                             <h4> <strong>{{element.name  | uppercase}}        
                                                 </strong></h4>
-                                            <a routerLink='/departement' ><button class="btn btn-success" (click)="EnvoyerIdDep(element._links.self.href)"
+                                            <a routerLink='/departement' ><button  (click)="EnvoyerIdDep(element._links.self.href)"
                                              >Plus</button></a>
                                         </ul>
                                     </div>

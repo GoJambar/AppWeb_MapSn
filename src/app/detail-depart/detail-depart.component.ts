@@ -24,10 +24,6 @@ export class DetailDepartComponent implements OnInit {
   ngOnInit(): void {
       this.serviceDep.getDepartementById().subscribe(data => this.localiteDep=data);
       this.serviceRegion.getRegionById().subscribe(data => this.region=data);
-    
-   
-
-
 
   }
 

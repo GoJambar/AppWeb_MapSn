@@ -1,7 +1,7 @@
 <div class="container"> 
     <div class="row">
         <div class="col-xs-12">
-            <h2><strong> Communes de la Région de {{nom |uppercase}} </strong></h2>
+            <h2><strong> Communes de l'arrondissement de {{arrondissement.name|uppercase}} </strong></h2>
 
             <div class="container">
                 <div class="row">
@@ -13,7 +13,7 @@
                                                 </strong></h4>
                                                 
                             
-                                                <a routerLink="/commune"><button class="btn btn-success" (click)="EnvoyerIdCom(element._links.self.href)"
+                                                <a routerLink="/commune"><button (click)="EnvoyerIdCom(element._links.self.href)"
                                              >Plus</button></a>
                                         </ul>
                                     </div>

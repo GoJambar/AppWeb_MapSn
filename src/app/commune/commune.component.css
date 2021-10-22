@@ -4,12 +4,6 @@ h2{
     margin-top: 50px;
     font-family:serif;
 }
-.banniere{
-	width: 99%;
-	height: 200px;
-	margin-top: 50px;
-	 box-shadow: 5px 5px 15px lightblue;
-}
 .action {
     background-color: rgba(185, 208, 240, 0.16);
     border: 1px solid #CED8E7;
@@ -41,4 +35,10 @@ h3{
 }
 h4{
    font-family:monospace;
+}
+.bouton{
+    width: 250px;
+    text-align: center;
+    
+    margin-left:150px;
 }

@@ -32,17 +32,5 @@ export class ListeDepartComponent implements OnInit {
     this.serviceArrond.liste = code;
 
   }
-  search(){
-    if(this.name !=""){
-      this.localite=this.localite.filter(data=>{
-        return data.name.toLocaleUpperCase().match(this.name.toLocaleUpperCase());
-      })
-
-    }
-    else if (this.name== ""){
-      this.ngOnInit();
-    }
-
-  }
 
 }
