@@ -1,71 +1,100 @@
-<h1 class ="region"><strong>Region de {{region.name | uppercase}}</strong></h1>
+<h1 class="region"><strong>Region de {{region.name | uppercase}}</strong></h1>
 
-<div class="container">   
-    <div class="row">       
-        <div class="col-xs-12">
-            <h2><strong> Departement  de  {{localiteDep.name | uppercase}}</strong></h2>
-        </div>
-    </div>  
-</div>
-
-<div class="container">
+<div class="container" id="details">
     <div class="row">
-            <div class="col-lg-3 col-sm-6 col-xs-12 ">
-                <div class="action">
-                    <div class="action-description text-center">
-                        <ul class="list-group" >
-                            <h4><u> Superficie:</u><br> {{localiteDep.superficie}} m² </h4>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-
-            </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12 ">
-                <div class="action">
-                    <div class="action-description text-center">
-                        <ul class="list-group" >
-                            <h4> <u>Population: </u><br>{{localiteDep.population}} Hbts </h4>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-
-            </div>
-   
-<div class="col-lg-3 col-sm-6 col-xs-12 ">
-    <div class="action">
-        <div class="action-description text-center">
-            <ul class="list-group" >
-                <h4> <u>Latitude:</u><br>{{localiteDep.latitude}} degres </h4>
-            </ul>
+        <div class="col-xs-12">
+            <h2><strong> Departement de {{localiteDep.name | uppercase}}</strong></h2>
         </div>
     </div>
-    <div class="clearfix"></div>
 
-</div>
-<div class="col-lg-3 col-sm-6 col-xs-12 ">
-    <div class="action">
-        <div class="action-description text-center">
-            <ul class="list-group" >
-                <h4><u>Longitude:</u><br>{{localiteDep.longitute}} degres </h4>
-            </ul>
+    <div class="row">
+        <div class="col-lg-3 col-sm-6 col-xs-12 ">
+            <div class="action">
+                <div class="action-description text-center">
+                    <ul class="list-group">
+                        <h4><u> Superficie:</u><br> {{localiteDep.superficie}} m² </h4>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12 ">
+            <div class="action">
+                <div class="action-description text-center">
+                    <ul class="list-group">
+                        <h4> <u>Population: </u><br>{{localiteDep.population}} Hbts </h4>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+
+        <div class="col-lg-3 col-sm-6 col-xs-12 ">
+            <div class="action">
+                <div class="action-description text-center">
+                    <ul class="list-group">
+                        <h4> <u>Latitude:</u><br>{{localiteDep.latitude}} degres </h4>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12 ">
+            <div class="action">
+                <div class="action-description text-center">
+                    <ul class="list-group">
+                        <h4><u>Longitude:</u><br>{{localiteDep.longitute}} degres </h4>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
         </div>
     </div>
-    <div class="clearfix"></div>
-
 </div>
 
-           
-            <ul class="list-group">
-                <app-liste-arrond></app-liste-arrond>
-                
-            </ul>
-        
+<div class="bouton">
+    <p id="details">
+
+    </p>
+    <button (click)='download()'>Télécharger les details (pdf)</button>
+    <p>Partager le lien avec
+        <button class="share_twitter" (click)="share_twitter()">
+            <i class="fab fa-twitter"></i>
+        </button>
+        <button class="share_facebook" (click)="share_facebook()" style="margin-left: 10px;">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+    </p>
+</div>
+
+
+<ul class="list-group">
+    <app-liste-arrond></app-liste-arrond>
+
+</ul>
+
+<a routerLink="">
+    <button class="boutonA">Retour à l'accueil</button>
+
+</a>
+
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-dark" href="https://gojambar.com/">Gojambar</a>
     </div>
-    
-</div>
+    <!-- Copyright -->
+</footer>
+
+
+
+
+
+
 <router-outlet></router-outlet>
-
-

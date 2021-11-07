@@ -36,9 +36,26 @@ h3{
 h4{
    font-family:monospace;
 }
+div button{
+    margin-left: 40px;
+}
 .bouton{
     width: 250px;
     text-align: center;
     
-    margin-left:150px;
+    margin-left:100px;
+    display: inline;
+}
+.boutonA{
+   
+    margin-left:120px;
+    width: 210px;
+    margin-bottom: 40px;
+    
+}
+p{
+    display: inline;
+    margin-left: 40px;
+    font-family:serif;
+    font-size: 20px;
 }

@@ -48,3 +48,22 @@ h2{
 h4{
     font-family:monospace;
  }
+
+ .bouton{
+    width: 250px;
+    text-align: center;
+    display: inline;
+    margin-left:150px;
+}
+.boutonA{
+    width: 210px;
+    margin-left:120px;
+    margin-bottom: 40px;
+
+}
+p{
+    display: inline;
+    margin-left: 40px;
+    font-family:serif;
+    font-size: 20px;
+}

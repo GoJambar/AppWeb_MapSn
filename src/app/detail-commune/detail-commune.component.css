@@ -43,11 +43,28 @@ h2{
         line-height: 25px;
     }
 
-    .bouton{
+    .boutonA{
         background-color: #D1ABAD;
+        margin-left:  100px;
+        width: 250px;
+        margin-bottom: 40px;
         
     }
     h4{
         font-family:monospace;
+       
      }
+     .bouton{
+        width: 210px;
+        text-align: center;
+        display: inline;
+        margin-left:450px;
+    }
+    p{
+        display: inline;
+        font-size: 20px;
+        margin-left: 40px;
+        font-family:serif;
+    }
+    
     

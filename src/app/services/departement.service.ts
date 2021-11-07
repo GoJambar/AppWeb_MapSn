@@ -12,24 +12,23 @@ import { RegionServicesService } from './region-services.service';
 })
 export class DepartementService {
 
-  constructor(private http: HttpClient,private serviceRegion : RegionServicesService) { 
+  constructor(private http: HttpClient) {
 
-  } 
-  lien="";
-  nameRegion="";
-  api="http://localhost:8080/departements/";
-  
-  getDepartement():Observable<LocaliteDep>{
-   
-      return this.http.get<LocaliteDep>('/v1/'+ this.lien + '/depart' );
-  
+  }
+  lien = "";
+  nameRegion = "";
+
+  getDepartement(): Observable<LocaliteDep> {
+
+    return this.http.get<LocaliteDep>('/v1/' + this.lien + '/depart');
+
   }
 
-  getDepartementById():Observable<Departement>{
-    
-    return this.http.get<Departement>('/v1/'+ this.lien);
+  getDepartementById(): Observable<Departement> {
 
-  
+    return this.http.get<Departement>('/v1/' + this.lien);
+
+
   }
 }
 

@@ -1,23 +1,5 @@
-.banniere{
-	width: 99%;
-	height: 100px;
-	margin-top: 50px;
-	 box-shadow: 5px 5px 15px lightblue;
-}
-
-.carteSn{
-    width: 80%;
-	margin-top: 20px;
-	margin-left:150px;
 
 
-}
-
-.sen{
-	background-color: cadetblue;
-	text-align: center;
-	margin-top: 20px;
-}
 .img-action{
     width: 100%;
     height: 250px;
@@ -35,19 +17,10 @@
     font-size: 29px;
 }
 
-.bouton-action{
-	border-radius: 10px;
-	background-color: #377F8F;
-	color: black;
-	height: 40px;
-	width: 70px;
-	margin-left: 150px;
 
-
-}
 .action {
     /*background: rgb(242, 247, 255);*/
-    background-color: rgba(185, 208, 240, 0.16);
+    background-color:#F5F0F0;
     border: 1px solid #CED8E7;
     margin: 30px 0px;
     padding-bottom: 30px;
@@ -78,5 +51,12 @@
 }
 input{
 	width: 30%;
-	margin-left: auto;
+	margin-left: 500px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.btn{
+	background-color: darkcyan;
+
 }

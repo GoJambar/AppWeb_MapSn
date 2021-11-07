@@ -32,7 +32,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/icone.js"
+              
+
+            ]
           },
           "configurations": {
             "production": {

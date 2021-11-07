@@ -1,0 +1,44 @@
+<nav>
+
+        <input class="form-control search" type="text" [(ngModel)]="name" (input)=search()
+                placeholder="Entrer le nom de la région " />
+
+
+</nav>
+
+<div class="container">
+        <div class="row">
+                <div class="col-lg-4 col-sm-6 col-xs-12 " *ngFor="let  element of localite">
+                        <div class="action">
+                                <div class="img-action">
+                                        <img class="img-action"
+                                                src="http://localhost:8080/api/region/imageRegion/{{element.codeRegion}}">
+
+                                </div>
+                                <div class="action-description text-center">
+                                        <h4 class="titre-action">{{element.name | uppercase}}</h4>
+
+                                        <a routerLink='/region' [queryParams]="{name: element.name}"><button class="btn"
+                                                        (click)="EnvoyerIdReg(element._links.self.href,element.name)">Voir
+                                                        plus</button></a>
+
+
+                                </div>
+                        </div>
+                        <div class="clearfix"></div>
+                </div>
+        </div>
+</div>
+
+<footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2021 Copyright:
+                <a class="text-dark" href="https://gojambar.com/">Gojambar</a>
+        </div>
+        <!-- Copyright -->
+</footer>
+
+
+
+<router-outlet></router-outlet>
