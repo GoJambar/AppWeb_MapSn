@@ -1,5 +1,5 @@
 # AppTest
-apSn est une application web qui permet lister les circonscriptions administratives 
+MapSn est une application web qui permet lister les circonscriptions administratives 
 du Sénégal avec les données sociodémographiques associés au territoire. J
 
 ## Development server
