@@ -1,6 +1,6 @@
 # AppTest
 MapSn est une application web qui permet lister les circonscriptions administratives 
-du Sénégal avec les données sociodémographiques associés au territoire. J
+du Sénégal avec les données sociodémographiques associés au territoire. 
 
 ## Development server
 
