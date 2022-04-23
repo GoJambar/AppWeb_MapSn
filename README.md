@@ -1,6 +1,6 @@
 # AppTest
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+apSn est une application web qui permet lister les circonscriptions administratives 
+du Sénégal avec les données sociodémographiques associés au territoire. J
 
 ## Development server
 
